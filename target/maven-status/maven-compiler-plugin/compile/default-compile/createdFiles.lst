@@ -1,3 +1,16 @@
+tg/univlome/epl/boutique/service/ClientService.class
+tg/univlome/epl/boutique/web/resources/ProduitAcheteResource.class
+tg/univlome/epl/boutique/service/ProduitAcheteService.class
+tg/univlome/epl/boutique/web/resources/CategorieResource.class
+tg/univlome/epl/boutique/service/AchatService.class
 tg/univlome/epl/boutique/web/RestConfiguration.class
-tg/univlome/epl/boutique/service/ProduitService.class
+tg/univlome/epl/boutique/service/CategorieService.class
+tg/univlome/epl/boutique/service/PersonneService.class
 tg/univlome/epl/boutique/web/resources/ProduitResource.class
+tg/univlome/epl/boutique/service/ProduitService.class
+tg/univlome/epl/boutique/web/resources/PersonneResource.class
+tg/univlome/epl/boutique/web/resources/AchatResource.class
+tg/univlome/epl/boutique/service/EmployeService.class
+tg/univlome/epl/boutique/web/AppExceptionMapper.class
+tg/univlome/epl/boutique/web/resources/ClientResource.class
+tg/univlome/epl/boutique/web/resources/EmployeResource.class

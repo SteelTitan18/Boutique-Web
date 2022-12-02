@@ -4,6 +4,7 @@
  */
 package tg.univlome.epl.boutique.service;
 
+import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 import tg.univlome.epl.boutique.entites.Achat;
@@ -23,6 +24,7 @@ public class AchatService {
     public synchronized static AchatService getInstance() {
         if (instance == null) {
             instance = new AchatService();
+            liste.add(new Achat(1, LocalDate.now(), 0, null, null));
         }
         return instance;
     }
@@ -38,14 +40,14 @@ public class AchatService {
         }
     }
     
-    public void supprimer(Long id) {
+    public void supprimer(long id) {
         Achat a2 = this.trouver(id);
         if (a2 != null) {
             liste.remove(a2);
         }
     }
     
-    public Achat trouver(Long id) {
+    public Achat trouver(long id) {
         for (Achat achat : liste) {
             if (achat.getId() == id) {
                 return achat;

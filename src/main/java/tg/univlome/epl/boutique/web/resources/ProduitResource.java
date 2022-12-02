@@ -39,7 +39,8 @@ public class ProduitResource {
     }
     
     @DELETE
-    public void supprimer(Long id) {
+    @Path("/{id}")
+    public void supprimer(@PathParam("id") Long id) {
         this.service.supprimer(id);
     }
     
