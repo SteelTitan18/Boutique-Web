@@ -5,12 +5,15 @@
 package tg.univlome.epl.boutique.web.resources;
 
 import java.util.List;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import tg.univlome.epl.boutique.entites.Categorie;
 import tg.univlome.epl.boutique.service.CategorieService;
 
@@ -29,11 +32,13 @@ public class CategorieResource {
     }
     
     @POST
+    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public void ajouter(Categorie c) {
         this.service.ajouter(c);
     }
     
     @PUT
+    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public void modifier(Categorie c) {
         this.service.modifier(c);
     }
@@ -49,6 +54,7 @@ public class CategorieResource {
     }
     
     @GET
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Path("/{id}")
     public Categorie trouver(@PathParam("id") Long id) {
         return this.service.trouver(id);

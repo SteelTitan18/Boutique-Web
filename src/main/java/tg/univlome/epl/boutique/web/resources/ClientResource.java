@@ -5,12 +5,14 @@
 package tg.univlome.epl.boutique.web.resources;
 
 import java.util.List;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import tg.univlome.epl.boutique.entites.Client;
 import tg.univlome.epl.boutique.service.ClientService;
 
@@ -27,11 +29,13 @@ public class ClientResource {
     }
     
     @POST
+    @Consumes({"application/json", "application/xml"})
     public void ajouter(Client c) {
         this.service.ajouter(c);
     }
     
     @PUT
+    @Consumes({"application/json", "application/xml"})
     public void modifier(Client c) {
         this.service.modifier(c);
     }
@@ -48,6 +52,7 @@ public class ClientResource {
     
     @GET
     @Path("/{id}")
+    @Produces({"application/json", "application/xml"})
     public Client trouver(@PathParam("id") Long id) {
         return this.service.trouver(id);
     }

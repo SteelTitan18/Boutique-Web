@@ -16,7 +16,7 @@ import javax.ws.rs.ext.Provider;
  */
 
 @Provider
-public class AppExceptionMapper implements ExceptionMapper<Exception>{
+public class AppExceptionMapper implements ExceptionMapper<Exception> {
 
     @Override
     public Response toResponse(Exception e) {

@@ -13,6 +13,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import tg.univlome.epl.boutique.entites.Achat;
 import tg.univlome.epl.boutique.service.AchatService;
 
@@ -31,12 +32,13 @@ public class AchatResource {
     }
     
     @POST
-    @Consumes({"application/json", "application/xml"})
+    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public void ajouter(Achat a) {
         this.service.ajouter(a);
     }
     
     @PUT
+    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public void modifier(Achat a) {
         this.service.modifier(a);
     }
@@ -48,7 +50,7 @@ public class AchatResource {
     }
     
     @GET
-    @Produces({"application/json", "application/xml"})
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public List<Achat> lister() {
         return this.service.lister();
     }
@@ -61,6 +63,7 @@ public class AchatResource {
     
     @GET
     @Path("/{id}")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Achat trouver(@PathParam("id") long id) {
         return this.service.trouver((int) id);
     }
